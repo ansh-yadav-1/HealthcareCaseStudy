@@ -16,9 +16,8 @@ An enterprise-grade healthcare analytics project combining rigorous **Python exp
 
 Access the client-side executive BI dashboard deployed directly via GitHub Pages:
 
-👉 **[View Interactive Dashboard](https://YOUR_USERNAME.github.io/YOUR_REPOSITORY/)**
+👉 **[View Interactive Dashboard]((https://github.com/ansh-yadav-1/HealthcareCaseStudy))**
 
-*(Note: Replace `YOUR_USERNAME` and `YOUR_REPOSITORY` with your GitHub profile and repository name once published.)*
 
 ---
 
@@ -185,7 +184,7 @@ This repository represents a **Python Data Analytics project**. Artificial intel
 
 **Ansh Yadav**  
 - **GitHub:** [@ansh-yadav-1](https://github.com/ansh-yadav-1)  
-- **LinkedIn:** [Ansh Yadav](https://www.linkedin.com/in/) *(Update with your LinkedIn URL)*  
+- **LinkedIn:** [Ansh Yadav]((https://www.linkedin.com/in/anshyadav1/)) 
 - **Project Repository:** [HealthcareCaseStudy](https://github.com/ansh-yadav-1/HealthcareCaseStudy)
 
 ---
