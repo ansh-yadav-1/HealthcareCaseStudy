@@ -8,7 +8,7 @@
 [![Chart.js](https://img.shields.io/badge/Chart.js-4.0-FF6384.svg?logo=chartdotjs&logoColor=white)](https://www.chartjs.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-An enterprise-grade healthcare analytics project combining rigorous **Python exploratory data analysis** with an **interactive, AI-assisted Business Intelligence dashboard** designed for hospital executives, clinical directors, and revenue cycle managers.
+A Python-based healthcare data analytics project combining **exploratory data analysis** with an **AI-assisted interactive Business Intelligence dashboard**. The project explores encounter volumes, billing patterns, insurance distribution, length of stay, and emergency admission trends using a synthetic healthcare dataset.
 
 ---
 
@@ -16,7 +16,9 @@ An enterprise-grade healthcare analytics project combining rigorous **Python exp
 
 Access the client-side executive BI dashboard deployed directly via GitHub Pages:
 
-👉 **[View Interactive Dashboard]((https://github.com/ansh-yadav-1/HealthcareCaseStudy))**
+👉 **[View Live Interactive Dashboard](https://ansh-yadav-1.github.io/HealthcareCaseStudy/)**  
+
+📂 **[View GitHub Repository](https://github.com/ansh-yadav-1/HealthcareCaseStudy)**
 
 
 ---
@@ -35,7 +37,7 @@ Hospital administrators, chief medical officers, and financial planners operate 
 - Inefficient emergency department triage during acute volume surges.
 - Data integrity anomalies in electronic health record (EHR) billing ledgers.
 
-This project delivers an end-to-end analytical workflow: starting from data quality auditing, exploratory analysis, and hypothesis validation in Python (`pandas`, `numpy`, `matplotlib`, `seaborn`), culminating in a responsive, standalone executive BI dashboard with real-time multi-dimensional cohort slicing and data export capabilities.
+This project follows an end-to-end analytical workflow: data quality assessment, data cleaning, exploratory analysis, and statistical investigation in Python (`pandas`, `numpy`, `matplotlib`), followed by an interactive executive dashboard with multi-dimensional filtering and data export capabilities.
 
 ---
 
@@ -56,7 +58,7 @@ This project delivers an end-to-end analytical workflow: starting from data qual
 | **Data Analytics & Statistics** | Python 3.9+, Pandas, NumPy | Data cleaning, deduplication, feature engineering, statistical correlation |
 | **Exploratory Visualizations** | Matplotlib, Seaborn | Distribution plots, boxplots, correlation scatterplots, time-series analysis |
 | **Interactive Computing** | Jupyter Notebook, IPykernel | Reproducible analytical documentation and computational reporting |
-| **BI Executive Dashboard** | HTML5, JavaScript (ES6+), Chart.js | Responsive, standalone, zero-dependency client-side analytics interface |
+| **BI Executive Dashboard** | HTML5, CSS, JavaScript (ES6+), Chart.js | Responsive, client-side interactive analytics interface |
 | **Styling & UI Components** | Tailwind CSS (CDN), Font Awesome 6 | Power BI / Tableau-inspired clean enterprise executive layout |
 | **AI-Assisted Acceleration** | Antigravity AI Assisted Workflows | Rapid prototyping of dashboard structure, multidimensional data cube modeling |
 
@@ -102,8 +104,8 @@ All reported numbers are strictly calculated from the underlying dataset:
 
 * **Cleaned Encounter Volume:** **54,966 encounters** analyzed following the elimination of 534 exact duplicate rows from 55,500 raw entries.
 * **Financial Anomaly Identified:** Exactly **106 encounters** exhibit negative billing values ranging from **-$23.87** to **-$2,008.49** (mean: **-$502.47**). These records are deliberately preserved as financial audit flags rather than arbitrarily deleted.
-* **Average Billing Stability:** Overall encounter billing averages **$25,544.31** (standard deviation: **$14,208.41**; median: **$25,542.75**; range: -$2,008.49 to $52,764.28). Monthly averages across all 61 months fluctuate tightly between $24,800 and $26,300 with no seasonal degradation.
-* **Age vs. Billing Independence:** Pearson correlation between patient age and billing amount is **$r = -0.0034$** (statistically zero), proving age does not drive higher billing amounts in this encounter model.
+* **Billing Distribution:** Average encounter billing is **$25,544.31** (standard deviation: **$14,208.41**; median: **$25,542.75**; range: -$2,008.49 to $52,764.28). Monthly averages across the 61 observed months fluctuate within a relatively narrow range; this describes the synthetic dataset and should not be interpreted as a forecast.
+* **Age vs. Billing Relationship:** Pearson correlation between patient age and billing amount is **r = -0.0034**, indicating virtually no linear association in this dataset. This does not establish that age has no effect in real-world healthcare billing.
 * **Balanced Clinical Spread:** Diagnoses are distributed evenly across the 6 tracked conditions:
   - Arthritis: 9,218 (16.8%)
   - Diabetes: 9,216 (16.8%)
@@ -112,16 +114,16 @@ All reported numbers are strictly calculated from the underlying dataset:
   - Cancer: 9,140 (16.6%)
   - Asthma: 9,095 (16.5%)
 * **Payer Market Share Diversification:** Encounters are split across 5 major insurance carriers: Cigna (20.3%), Medicare (20.1%), UnitedHealthcare (20.0%), Blue Cross (19.9%), and Aetna (19.7%).
-* **Elevated Length of Stay (ALOS):** Average inpatient stay is **15.50 days** (range: 1 to 30 days) uniformly across Elective, Urgent, and Emergency admissions, indicating a major bed turnover bottleneck compared to typical acute-care norms (4.5–5.5 days).
+* **Length of Stay:** Average encounter length of stay is **15.50 days** (range: 1 to 30 days). This is a descriptive result from the synthetic dataset and would require operational context before drawing conclusions about bed capacity or performance.
 * **Emergency Department Peak Surge:** Monthly emergency volume peaked in **July 2020** with **355 admissions** (compared to a monthly average of ~297).
 * **High-Cost Encounter Exposure:** The 95th percentile billing threshold is **$47,638.27**. The top 5% cohort comprises **2,749 encounters** accounting for over **$137 Million** in cumulative charges.
-* **Diagnostic Acuity in Emergency Department:** Exactly **33.36%** of all emergency encounters (6,038 out of 18,102) present with **Abnormal** lab/test results, led clinically by **Obesity (1,058 cases)** and **Cancer (1,057 cases)**.
+* **Abnormal Results in Emergency Encounters:** **33.36%** of emergency encounters (6,038 out of 18,102) are recorded with **Abnormal** test results. The largest condition groups are Obesity (1,058 encounters) and Cancer (1,057 encounters); these are descriptive categories, not clinical risk assessments.
 
 ---
 
 ## 🖥️ Executive BI Dashboard Features
 
-The dashboard at [`dashboard/index.html`](dashboard/index.html) is built as a self-contained, client-side business intelligence interface:
+The [executive dashboard](https://ansh-yadav-1.github.io/HealthcareCaseStudy/) is built as a client-side business intelligence interface:
 
 * **Interactive Multi-Dimensional Filters:**
   - **Medical Condition:** All, Arthritis, Asthma, Cancer, Diabetes, Hypertension, Obesity.
@@ -144,20 +146,20 @@ The dashboard at [`dashboard/index.html`](dashboard/index.html) is built as a se
 
 ## 💡 Strategic Business Recommendations
 
-Based on the empirical findings, hospital management and clinical operations directors should execute the following 4 initiatives:
+The findings suggest areas that a real healthcare organization could investigate further. These are exploratory considerations based on synthetic data, not validated operational recommendations:
 
 1. **Revenue Cycle Management: Negative Billing Audit**
    - **Finding:** 106 encounters exhibit negative billing amounts ($-\$502.47$ average).
-   - **Action:** Launch an immediate internal audit across patient accounting and billing software. Validate whether these entries reflect legitimate refund disbursements, payer reconciliations, or unhandled software credit exceptions. Implement automated input validation in the electronic health record system to prevent unverified negative charge posting.
+   - **Consideration:** In a real billing environment, review whether negative values represent refunds, adjustments, reversals, or data-entry issues before deciding whether corrective action is needed.
 2. **Inpatient Flow: ALOS & Bed Turnover Optimization**
    - **Finding:** The average length of stay is 15.50 days across all admission types, significantly higher than acute care benchmarks (4.5–5.5 days).
-   - **Action:** Establish multidisciplinary early discharge planning teams (physicians, case managers, social workers) initiated on Day 1 of admission. Reducing average stay by even 2.5 days would expand functional bed capacity by ~16% without capital construction expenditure.
+   - **Consideration:** Compare length of stay with case mix, admission severity, discharge practices, and occupancy data before assessing whether process changes are appropriate.
 3. **Emergency Care: High-Acuity Diagnostic Fast-Track Pathways**
    - **Finding:** 33.36% of emergency visits return abnormal test results, with Obesity (1,058 cases) and Cancer (1,057 cases) representing the largest clinical subgroups.
-   - **Action:** Create specialized clinical fast-track protocols in the emergency department for patients presenting with oncology history or complex metabolic conditions to expedite lab panel turnarounds and targeted triage.
+   - **Consideration:** Do not infer triage priorities from this synthetic dataset alone. Clinical pathway changes require validated evidence and review by qualified professionals.
 4. **Capital Planning: Long-Term Revenue Predictability**
    - **Finding:** Billing per encounter remains remarkably stable (~$25,500/encounter) across 61 consecutive months with zero correlation to patient age ($r = -0.0034$), and insurance payer exposure is evenly divided among 5 major carriers (~20% each).
-   - **Action:** Hospital financial officers can model long-term debt servicing and multi-year facility improvements with high certainty, free from single-payer dependency or sharp seasonal revenue dips.
+   - **Consideration:** Treat payer distribution and billing trends as descriptive starting points. Financial planning requires actual reimbursement, collections, operating costs, payer contracts, and cash-flow data.
 
 ---
 
@@ -176,7 +178,7 @@ This repository represents a **Python Data Analytics project**. Artificial intel
 - Formulate the multidimensional aggregation data cube for the interactive JavaScript dashboard.
 - Generate responsive Tailwind CSS layout scaffolding.
 
-**No machine learning models, automated clinical diagnosis algorithms, or predictive analytics were fabricated.** All descriptive statistics, metrics, correlations, and findings are directly calculated from the empirical dataset using Python.
+**No machine learning models, automated clinical diagnosis algorithms, or predictive analytics are claimed.** Descriptive statistics, metrics, correlations, and findings are based on the dataset and Python analysis. AI assistance was used for dashboard development and presentation.
 
 ---
 
@@ -184,11 +186,11 @@ This repository represents a **Python Data Analytics project**. Artificial intel
 
 **Ansh Yadav**  
 - **GitHub:** [@ansh-yadav-1](https://github.com/ansh-yadav-1)  
-- **LinkedIn:** [Ansh Yadav]((https://www.linkedin.com/in/anshyadav1/)) 
+- **LinkedIn:** [Ansh Yadav](https://www.linkedin.com/in/anshyadav1/)
 - **Project Repository:** [HealthcareCaseStudy](https://github.com/ansh-yadav-1/HealthcareCaseStudy)
 
 ---
 
 ## 📄 License
 
-This project is licensed under the [MIT License](LICENSE) for all original code, notebooks, dashboard designs, and written documentation. The underlying synthetic healthcare dataset is published under [CC0: Public Domain](https://creativecommons.org/publicdomain/zero/1.0/).
+This project is licensed under the [MIT License](LICENSE) for original project code and documentation. The dataset remains subject to its original source licence and terms of use; verify those terms before redistributing the CSV.
