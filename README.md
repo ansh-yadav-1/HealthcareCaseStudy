@@ -4,8 +4,6 @@
 [![Pandas](https://img.shields.io/badge/Pandas-2.0%2B-150458.svg?logo=pandas&logoColor=white)](https://pandas.pydata.org/)
 [![NumPy](https://img.shields.io/badge/NumPy-1.24%2B-013243.svg?logo=numpy&logoColor=white)](https://numpy.org/)
 [![Matplotlib](https://img.shields.io/badge/Matplotlib-3.7%2B-11557c.svg)](https://matplotlib.org/)
-[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.0-38B2AC.svg?logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
-[![Chart.js](https://img.shields.io/badge/Chart.js-4.0-FF6384.svg?logo=chartdotjs&logoColor=white)](https://www.chartjs.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 A Python-based healthcare data analytics project combining **exploratory data analysis** with an **AI-assisted interactive Business Intelligence dashboard**. The project explores encounter volumes, billing patterns, insurance distribution, length of stay, and emergency admission trends using a synthetic healthcare dataset.
@@ -16,7 +14,7 @@ A Python-based healthcare data analytics project combining **exploratory data an
 
 Access the client-side executive BI dashboard deployed directly via GitHub Pages:
 
-👉 **[View Live Interactive Dashboard](https://ansh-yadav-1.github.io/HealthcareCaseStudy/)**  
+👉 **[View Interactive Dashboard](https://ansh-yadav-1.github.io/HealthcareCaseStudy/dashboard.html)**
 
 📂 **[View GitHub Repository](https://github.com/ansh-yadav-1/HealthcareCaseStudy)**
 
